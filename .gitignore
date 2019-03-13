@@ -109,3 +109,8 @@ venv.bak/
 # Databases
 .db
 sqlite3
+/.vs/JustNoBot/v15/.suo
+/.vs/config/applicationhost.config
+/.vs/ProjectSettings.json
+/.vs/slnx.sqlite
+/.vs/VSWorkspaceState.json

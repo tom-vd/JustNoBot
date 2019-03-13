@@ -13,6 +13,9 @@ MIL_RULES = "**Quick Rules Guide**\n\n [Acronym index](https://www.reddit.com/r/
 
 FIL_RULES = "This is just a general reminder to all to adhere to [reddiquette](https://www.reddit.com/wiki/reddiquette) and to the [rules](https://www.reddit.com/r/Justnofil/about/rules/) of this subreddit.\n\n If you are in need of urgent help, there is also a link to crisis resources at the sidebar on the right, or click [here](https://www.reddit.com/r/Justnofil/wiki/crisis-resources) if you're on mobile.\n\n For tips protecting yourself, the resources are also on the sidebar on the right or click [here](https://www.reddit.com/r/Justnofil/wiki/protecting-yourself) if you're on mobile.\n\n"
 
+#FIXME: need to update this generic message to a subreddit-specific message.
+SO_RULES = "This is just a general reminder to all to adhere to [reddiquette](https://www.reddit.com/wiki/reddiquette) and to the [rules](https://www.reddit.com/r/justnoso/about/rules/) of this subreddit.\n\n"
+
 OTHER_RULES = "This is just a general reminder to all to adhere to [reddiquette](https://www.reddit.com/wiki/reddiquette) and to the [rules](https://www.reddit.com/r/LetterstoJNMIL/about/rules/) of this subreddit.\n\n"
 
 def dbinit():
@@ -156,10 +159,13 @@ def get_messages():
         time.sleep(10)
 
 def sub_message(welcome, subreddit):
+    #FIXME: do we need more subreddit-specific messages?
     if subreddit == "JUSTNOMIL":
         message = MIL_RULES + welcome
     elif subreddit == "Justnofil":
         message = FIL_RULES + welcome
+    elif subreddit == "JustNoSO":
+        message = SO_RULES + welcome
     else:
         message = OTHER_RULES + welcome
 
